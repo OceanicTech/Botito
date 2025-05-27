@@ -4,7 +4,7 @@ const pvp = require('mineflayer-pvp').plugin;
 
 function createBot({ username, password, host, port }) {
   const bot = mineflayer.createBot({
-    host, 
+    host,
     port,
     username,          // cambia el nombre por tu correo de microsoft los nombres estan en accounts.txt
     password,
@@ -40,11 +40,6 @@ function createBot({ username, password, host, port }) {
         }
       }
     });
-  });
-
-  // Cambiado a physicsTick para evitar warning deprecated
-  bot.on('physicsTick', () => {
-    // Aquí puedes poner lógica que necesites ejecutar en cada tick físico
   });
 
   bot.on('whisper', (from, message) => {

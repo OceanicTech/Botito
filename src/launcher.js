@@ -10,7 +10,7 @@ const RECONNECT_DELAY = 8000; // Tiempo para reconectar si se desconecta
 
 let index = 0;
 
-const accounts = fs.readFileSync('../accounts.txt', 'utf8')
+const accounts = fs.readFileSync('./accounts.txt', 'utf8')
   .split(/\r?\n/)
   .filter(Boolean)
   .map((line, i) => {

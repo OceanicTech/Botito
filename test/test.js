@@ -8,8 +8,8 @@ const bot = mineflayer.createBot({
   host: 'localhost', // o IP de tu servidor
   port: 25565,        // cambia si tu server tiene otro puerto
   username: 'TestBot',
-  version: '1.12.2',  // asegúrate que sea la misma que el server
-  auth: 'offline'
+  version: false,  // asegúrate que sea la misma que el server
+  // auth: 'offline'
 });
 
 bot.loadPlugin(pathfinder);
@@ -26,7 +26,7 @@ bot.on('chat', (username, message) => {
   if (message === 'ven') {
     const player = bot.players[username];
     if (!player?.entity) {
-      bot.chat('No te veo 😢');
+      bot.chat('no encuentro gente para pelear');
       return;
     }
 
@@ -39,10 +39,10 @@ bot.on('chat', (username, message) => {
   if (message === 'pelea') {
     const entity = bot.nearestEntity(e => e.type === 'mob');
     if (entity) {
-      bot.chat('¡A pelear, hijuepu...!');
+      bot.chat('¡modo pelea encendido!');
       bot.pvp.attack(entity);
     } else {
-      bot.chat('No veo a nadie para pelear 😴');
+      bot.chat('no hay nadie para pelear');
     }
   }
 });
