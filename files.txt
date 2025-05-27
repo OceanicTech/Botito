@@ -1,0 +1,16 @@
+bots/
+├── node_modules/              # Dependencias instaladas por npm
+├── src/                       # Código fuente principal
+│   ├── bot.js                 # Código principal del bot
+│   ├── launcher.js            # Script para iniciar múltiples bots (si aplica)
+│   └── configs/               # Archivos de configuración específicos
+│       ├── babel.config.js
+│       └── jest.config.js
+├── test/                      # Tests unitarios o funcionales
+│   └── test.js
+├── .version                   # Info de versión personalizada (si la usas)
+├── .gitignore                 # Ignorar archivos innecesarios si usas Git
+├── files.txt             # Mejor como archivo `.txt` para documentación
+├── README.md                  # Para documentación
+├── package.json
+└── package-lock.json
