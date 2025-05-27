@@ -41,7 +41,7 @@ function startNextBot() {
     const bot = createBot({ username, password, host: HOST, port: PORT });
 
     bot.on('end', () => {
-      console.warn(`[${username}] Desconectado. Intentando reconectar en ${RECONNECT_DELAY / 1000}s...`);
+      console.warn(`[${username}] Desconectado. Intentando reconectar en ${RECONNECT_DELAY / 10000}s...`);
       setTimeout(() => {
         console.log(`[${username}] Reconectando...`);
         startBotAgain(username, password);
@@ -65,7 +65,7 @@ function startBotAgain(username, password) {
     const bot = createBot({ username, password, host: HOST, port: PORT });
 
     bot.on('end', () => {
-      console.warn(`[${username}] Desconectado. Reintentando reconexión en ${RECONNECT_DELAY / 1000}s...`);
+      console.warn(`[${username}] Desconectado. Reintentando reconexión en ${RECONNECT_DELAY / 10000}s...`);
       setTimeout(() => startBotAgain(username, password), RECONNECT_DELAY);
     });
 
