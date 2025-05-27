@@ -77,7 +77,7 @@ bots/
 ## 🧪 Scripts
 Este proyecto se puede iniciar con:
 ```bash
-npm run start
+npm start
 ```
 ## Bot commands
 para que el bot entienda los comandos tienes que hacer esto:
@@ -97,25 +97,22 @@ $goto xyz es para ir a esas cord caminando
 
 $attack player es para atacar a ese jugador lo persige hasta matarlo o hasta el bot morir
 
-$stop para todas las acciones que este acciendo tipo attackar o ir a unas cord 
+$stop para todas las acciones que este acciendo tipo attackar o ir a unas cord
 
-$say es para decir algo o ejecutar algo en el chat 
+$say es para decir algo o ejecutar algo en el chat
 
-$end apaga el bot lo reinicia 
+$end apaga el bot lo reinicia
 
 ## ✍️ Autor
 Hecho por [**OceanicTech**]
 
 ¡Listo para conquistar servidores! 😎🔥
-```go
-¿Quieres que lo guarde directamente en un archivo llamado `README.md` o prefieres que te lo empaquete con todo el proyecto?
-```
 
 ## Extras
 Para que no te salga este error 
 
 ```bash
-
+Mineflayer detected that you are using a deprecated event (physicTick)! Please use this event (physicsTick) instead.
 ```
 en la carpeta `node_modules/mineflayer-pvp/lib/PVP.js` busca esta linea
 ```js
